@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viking Saber</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="text-white">
+  <!-- Hero Section -->
+  <section class="hero h-screen flex flex-col justify-center items-center text-center px-4">
+    <button id="modeToggleBtn" class="absolute top-4 right-4 bg-cyan-500 text-black px-4 py-2 rounded-full font-semibold hover:bg-cyan-600 transition duration-300 z-50">Toggle Light/Dark Mode</button>
+    <img src="../Desktop/Viking Sabers.jpg" alt="Viking Saber Logo" class="w-72 md:w-96 mb-6 saber-glow rounded-xl border border-cyan-400">
+    <h1 class="text-5xl md:text-7xl font-bold glow viking-font">VIKING SABER</h1>
+    <p class="text-lg md:text-2xl mt-4 max-w-2xl text-cyan-200 italic">The Code is strong with the Clan.</p>
+    <a href="#about" class="mt-8 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-black rounded-full font-semibold transition duration-300" id="forgeSaberBtn">Forge Your Saber</a>
+  </section>
+  <button id="scrollTopBtn" title="Go to top" class="fixed bottom-8 right-8 bg-cyan-500 text-black px-4 py-2 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-cyan-600 z-50">↑ Top</button>
+
+  <!-- About Section -->
+  <section id="about" class="px-6 md:px-24 py-16 bg-black bg-opacity-70">
+    <h2 class="text-4xl font-bold glow mb-6 text-center viking-font">The Saga Begins</h2>
+    <p class="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">Welcome to <strong>Viking Saber</strong>, where the might of Norse legend collides with the galaxy’s finest tech. Here, code flows like the Force and warriors write JavaScript as if carving runes into the cosmos. Whether you're a Padawan coder or a Jedi of Git, our tribe stands ready.</p>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="bg-gray-900 px-6 md:px-24 py-16">
+    <h2 class="text-4xl font-bold glow mb-8 text-center viking-font">Forge Your Arsenal</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow">Odin’s Eye</h3>
+        <p class="text-gray-300">See the future of your code with AI-powered guidance blessed by the Allfather.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-red-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow">Ragnarok Detector</h3>
+        <p class="text-gray-300">Sniff out bugs and looming chaos — before your code faces the final battle.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow">Valhalla Editor</h3>
+        <p class="text-gray-300">A sacred code forge where warriors write their destiny, line by glowing line.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-400 bg-black border-t border-cyan-800">
+    <p class="mb-2">&copy; 2025 Viking Saber. This is the way... to code.</p>
+    <p>Crafted in the halls of Valhalla with a saber and a dream.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,51 +1,280 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Body Styles */
 body {
-  background: radial-gradient(circle at center, #0d1b2a, #000);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-.glow {
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-}
-.saber-glow {
-  box-shadow: 0 0 40px 5px #00ffff;
-}
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('Viking%20Sabers.jpg') center/cover no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: background-color 0.5s ease;
-}
-.viking-font {
-  font-family: 'Cinzel', serif;
-  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  transition: background-color 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
 }
 
-/* Light mode styles */
-body.light-mode {
-  background: #f0f8ff;
+/* Main content wrapper */
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  border-top: 2px solid #00bcd4;
+  padding: 40px 0;
+  color: #ddd;
+  flex-shrink: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Main content wrapper */
+main {
+  flex: 1 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  background-image: url('images/Sith.jpg');
+  background-size: 50% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero img {
+  border-radius: 5px;
+  border: 2px solid #00bcd4;
+}
+
+.hero h1 {
+  font-family: 'Viking', sans-serif;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+}
+
+.hero p {
+  font-style: italic;
+  color: rgba(0, 255, 255, 0.8);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00bcd4;
+}
+
+/* About Section */
+#about {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ddd;
+  padding: 80px 0;
+}
+
+#about h2 {
+  font-family: 'Viking', sans-serif;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Tools Section */
+.bg-gray-900 {
+  background-color: #1f1f1f;
+}
+
+.bg-gray-800 {
+  background-color: #333;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  border-top: 2px solid #00bcd4;
+  padding: 40px 0;
+  color: #ddd;
+  flex-shrink: 0;
+}
+
+/* Scroll Button */
+#scrollTopBtn {
+  background-color: #00bcd4;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#scrollTopBtn:hover {
+  background-color: #0097a7;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .hero {
+  background-color: #121212;
+}
+
+body.dark-mode #about {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Lightsaber Colors */
+:root {
+  --lightsaber-blue: #00bfff;
+  --lightsaber-green: #32cd32;
+  --lightsaber-purple: #9b30ff;
+}
+
+/* Glow Text */
+.glow {
+  text-shadow:
+    0 0 5px var(--lightsaber-blue),
+    0 0 10px var(--lightsaber-blue),
+    0 0 20px var(--lightsaber-blue),
+    0 0 40px var(--lightsaber-blue);
+}
+
+/* Additional glow colors */
+.glow-green {
+  text-shadow:
+    0 0 5px var(--lightsaber-green),
+    0 0 10px var(--lightsaber-green),
+    0 0 20px var(--lightsaber-green),
+    0 0 40px var(--lightsaber-green);
+}
+
+.glow-purple {
+  text-shadow:
+    0 0 5px var(--lightsaber-purple),
+    0 0 10px var(--lightsaber-purple),
+    0 0 20px var(--lightsaber-purple),
+    0 0 40px var(--lightsaber-purple);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px var(--lightsaber-blue);
+  border: 1px solid var(--lightsaber-blue);
+  background-color: #000;
+  color: var(--lightsaber-blue);
+}
+
+button:hover {
+  background-color: var(--lightsaber-blue);
   color: #000;
+  box-shadow:
+    0 0 10px var(--lightsaber-blue),
+    0 0 20px var(--lightsaber-blue),
+    0 0 30px var(--lightsaber-blue);
 }
-body.light-mode .hero {
-  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.8)), url('Viking%20Sabers.jpg') center/cover no-repeat;
+
+/* Buttons with green glow */
+button.green {
+  box-shadow: 0 0 10px var(--lightsaber-green);
+  border: 1px solid var(--lightsaber-green);
+  color: var(--lightsaber-green);
 }
-body.light-mode .glow {
-  text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
-}
-body.light-mode .saber-glow {
-  box-shadow: 0 0 40px 5px #0000ff;
-}
-body.light-mode .bg-gray-800 {
-  background-color: #e0e7ff;
+
+button.green:hover {
+  background-color: var(--lightsaber-green);
   color: #000;
+  box-shadow:
+    0 0 10px var(--lightsaber-green),
+    0 0 20px var(--lightsaber-green),
+    0 0 30px var(--lightsaber-green);
 }
-body.light-mode .bg-gray-900 {
-  background-color: #cbd5e1;
+
+/* Buttons with purple glow */
+button.purple {
+  box-shadow: 0 0 10px var(--lightsaber-purple);
+  border: 1px solid var(--lightsaber-purple);
+  color: var(--lightsaber-purple);
+}
+
+button.purple:hover {
+  background-color: var(--lightsaber-purple);
   color: #000;
+  box-shadow:
+    0 0 10px var(--lightsaber-purple),
+    0 0 20px var(--lightsaber-purple),
+    0 0 30px var(--lightsaber-purple);
 }
-body.light-mode footer {
-  background-color: #e2e8f0;
-  color: #333;
-  border-color: #94a3b8;
+
+/* Card hover shadows with lightsaber colors */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px var(--lightsaber-blue),
+    0 0 30px var(--lightsaber-blue);
+}
+
+/* Additional card hover colors */
+.card.green:hover {
+  box-shadow:
+    0 0 15px var(--lightsaber-green),
+    0 0 30px var(--lightsaber-green);
+}
+
+.card.purple:hover {
+  box-shadow:
+    0 0 15px var(--lightsaber-purple),
+    0 0 30px var(--lightsaber-purple);
+}
+
+/* Transition for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Lightsaber cursor */
+body {
+  cursor: none;
+}
+
+.lightsaber-cursor {
+  position: fixed;
+  pointer-events: none;
+  width: 40px;
+  height: 10px;
+  background: linear-gradient(90deg, #00bfff, #32cd32, #9b30ff);
+  box-shadow:
+    0 0 10px #00bfff,
+    0 0 20px #32cd32,
+    0 0 30px #9b30ff;
+  border-radius: 2px;
+  transform-origin: left center;
+  transition: transform 0.1s ease;
+  z-index: 9999;
 }

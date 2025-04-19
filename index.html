@@ -2,19 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
   <title>Viking Saber</title>
+  <meta name="description" content="Viking Saber - The Code is strong with the Clan. A Norse legend inspired coding community with powerful tools and guidance." />
+  <meta name="keywords" content="Viking, Saber, Coding, JavaScript, Norse, Tech, AI, Developer Tools" />
+  <meta name="author" content="Viking Saber Team" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="text-white">
+  <!-- Navbar -->
+  <nav class="bg-black bg-opacity-90 border-b border-blue-500 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center">
+        <img src="images/Viking Sabers.jpg" alt="Viking Saber Logo" class="h-12 w-auto rounded-xl border border-blue-500 mr-3">
+        <span class="text-blue-400 font-bold text-xl viking-font glow-blue">Viking Saber</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-4">
+        <ul class="flex space-x-8 text-blue-300 font-semibold">
+          <li><a href="#about" class="hover:text-blue-500 transition glow-green">About</a></li>
+          <li><a href="#tools" class="hover:text-purple-500 transition glow-purple">Tools</a></li>
+          <li><a href="#portfolio" class="hover:text-yellow-400 transition glow-yellow-400">Portfolio</a></li>
+          <li><a href="#contact" class="hover:text-blue-500 transition glow-blue">Contact</a></li>
+        </ul>
+        <input type="search" placeholder="Search..." class="px-3 py-1 rounded bg-gray-800 border border-blue-500 text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 ml-4" />
+      </div>
+      <div class="md:hidden flex items-center space-x-4">
+        <button id="mobileMenuToggle" class="text-blue-400 focus:outline-none" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+        <button id="modeToggleBtn" class="button blue">Toggle Mode</button>
+      </div>
+    </div>
+      <div id="mobileMenu" class="hidden md:hidden bg-black bg-opacity-90 border-t border-blue-500 px-6 py-4">
+        <ul class="flex flex-col space-y-4 text-blue-300 font-semibold">
+          <li><a href="#about" class="hover:text-blue-500 transition glow-green">About</a></li>
+          <li><a href="#tools" class="hover:text-purple-500 transition glow-purple">Tools</a></li>
+          <li><a href="#portfolio" class="hover:text-yellow-400 transition glow-yellow-400">Portfolio</a></li>
+          <li><a href="#contact" class="hover:text-blue-500 transition glow-blue">Contact</a></li>
+          <li><input type="search" placeholder="Search..." class="px-3 py-1 rounded bg-gray-800 border border-blue-500 text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 w-full" /></li>
+        </ul>
+      </div>
+
+  <!-- Testimonials Section -->
+  <section class="px-6 md:px-24 py-16 bg-black bg-opacity-70 text-gray-300" id="testimonials">
+    <h2 class="text-4xl font-bold glow mb-6 text-center viking-font text-cyan-400">What Our Warriors Say</h2>
+    <div class="max-w-5xl mx-auto relative overflow-hidden">
+      <div class="testimonial-slider flex transition-transform duration-500 ease-in-out">
+        <div class="testimonial p-6 bg-gray-800 rounded-xl shadow-lg min-w-full">
+          <p class="italic mb-4">"Viking Saber has transformed my coding journey. The tools are legendary!"</p>
+          <p class="font-semibold">- Erik the Coder</p>
+        </div>
+        <div class="testimonial p-6 bg-gray-800 rounded-xl shadow-lg min-w-full">
+          <p class="italic mb-4">"The Ragnarok Detector saved me from countless bugs. Truly a lifesaver."</p>
+          <p class="font-semibold">- Freya Dev</p>
+        </div>
+        <div class="testimonial p-6 bg-gray-800 rounded-xl shadow-lg min-w-full">
+          <p class="italic mb-4">"Valhalla Editor is my sacred forge. Code flows like runes from my fingertips."</p>
+          <p class="font-semibold">- Odin's Apprentice</p>
+        </div>
+      </div>
+      <button id="prevTestimonial" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">‹</button>
+      <button id="nextTestimonial" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2">›</button>
+    </div>
+  </section>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero h-screen flex flex-col justify-center items-center text-center px-4">
-    <button id="modeToggleBtn" class="absolute top-4 right-4 bg-cyan-500 text-black px-4 py-2 rounded-full font-semibold hover:bg-cyan-600 transition duration-300 z-50">Toggle Light/Dark Mode</button>
-    <img src="../Desktop/Viking Sabers.jpg" alt="Viking Saber Logo" class="w-72 md:w-96 mb-6 saber-glow rounded-xl border border-cyan-400">
-    <h1 class="text-5xl md:text-7xl font-bold glow viking-font">VIKING SABER</h1>
-    <p class="text-lg md:text-2xl mt-4 max-w-2xl text-cyan-200 italic">The Code is strong with the Clan.</p>
-    <a href="#about" class="mt-8 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-black rounded-full font-semibold transition duration-300" id="forgeSaberBtn">Forge Your Saber</a>
+  <section class="hero h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+    <h1 class="text-5xl md:text-7xl font-bold glow viking-font glow-blue">VIKING SABER</h1>
+    <p class="text-lg md:text-2xl mt-4 max-w-2xl text-blue-200 italic glow-green">The Code is strong with the Clan.</p>
+    <a href="#about" class="mt-8 px-6 py-3 button green rounded-full font-semibold transition duration-300" id="forgeSaberBtn">Forge Your Saber</a>
+  </section>
+
+  <!-- Introductory Section -->
+  <section class="px-6 md:px-24 py-12 bg-gray-900 text-center text-gray-300 rounded-lg max-w-4xl mx-auto mt-12">
+    <p class="text-xl font-semibold glow-blue">Viking Saber is a Norse legend inspired coding community with powerful tools and guidance.</p>
   </section>
   <button id="scrollTopBtn" title="Go to top" class="fixed bottom-8 right-8 bg-cyan-500 text-black px-4 py-2 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-cyan-600 z-50">↑ Top</button>
 
@@ -25,7 +95,7 @@
   </section>
 
   <!-- Tools Section -->
-  <section class="bg-gray-900 px-6 md:px-24 py-16">
+  <section class="bg-gray-900 px-6 md:px-24 py-16" id="tools">
     <h2 class="text-4xl font-bold glow mb-8 text-center viking-font">Forge Your Arsenal</h2>
     <div class="grid md:grid-cols-3 gap-8 text-center">
       <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
@@ -40,13 +110,253 @@
         <h3 class="text-2xl font-semibold mb-2 glow">Valhalla Editor</h3>
         <p class="text-gray-300">A sacred code forge where warriors write their destiny, line by glowing line.</p>
       </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-green-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-green">Mjolnir Debugger</h3>
+        <p class="text-gray-300">Strike down bugs with the power of Thor’s hammer, delivering lightning-fast fixes.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-yellow-400">Bifrost Bridge</h3>
+        <p class="text-gray-300">Seamlessly connect your projects across realms with our multi-platform integration tool.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-pink-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-pink-400">Runestone Compiler</h3>
+        <p class="text-gray-300">Transform your code into powerful runes with our blazing fast compiler.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="px-6 md:px-24 py-16 bg-black bg-opacity-70 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-6 text-center viking-font text-cyan-400">Contact the Clan</h2>
+
+    <!-- Countdown Timer Section -->
+    <div id="countdown" class="text-center mb-12">
+      <h3 class="text-3xl font-semibold glow-blue mb-4">Next Great Event Starts In:</h3>
+      <div class="flex justify-center space-x-6 text-blue-300 text-xl font-mono">
+        <div><span id="days">00</span> Days</div>
+        <div><span id="hours">00</span> Hours</div>
+        <div><span id="minutes">00</span> Minutes</div>
+        <div><span id="seconds">00</span> Seconds</div>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+      <form class="space-y-6" action="https://formspree.io/f/yourformid" method="POST">
+        <div>
+          <label for="name" class="block mb-2 font-semibold">Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-gray-800 border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        </div>
+        <div>
+          <label for="email" class="block mb-2 font-semibold">Email</label>
+          <input type="email" id="email" name="_replyto" required class="w-full px-4 py-2 rounded bg-gray-800 border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        </div>
+        <div>
+          <label for="message" class="block mb-2 font-semibold">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded bg-gray-800 border border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+        </div>
+        <button type="submit" class="button purple font-semibold px-6 py-3 rounded transition duration-300">Send Message</button>
+      </form>
+      <div class="space-y-4 text-center md:text-left">
+        <p class="text-lg font-semibold">Reach out to us through any of the following:</p>
+        <p><strong>Email:</strong> <a href="mailto:contact@vikingsaber.com" class="text-purple-400 hover:underline glow-purple">contact@vikingsaber.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+1234567890" class="text-purple-400 hover:underline glow-purple">+1 (234) 567-890</a></p>
+        <p><strong>Address:</strong> Valhalla Hall, Asgard Realm</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="px-6 md:px-24 py-16 bg-gray-900 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-8 text-center viking-font text-yellow-400">Portfolio</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-yellow-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-yellow-400">Project Valhalla</h3>
+        <p>Epic web app for managing your Norse quests and coding challenges.</p>
+        <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">View Project</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-yellow-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-yellow-400">Runic Compiler</h3>
+        <p>Fast and powerful compiler that turns your code into magical runes.</p>
+        <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">View Project</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-yellow-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-yellow-400">Bifrost Bridge</h3>
+        <p>Multi-platform integration tool connecting realms and projects seamlessly.</p>
+        <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">View Project</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-yellow-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-yellow-400">Star Wars Forge</h3>
+        <p>A legendary forge inspired by the galaxy far, far away, crafting epic coding lightsabers.</p>
+        <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog/News Section -->
+  <section id="blog" class="px-6 md:px-24 py-16 bg-gray-800 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-8 text-center viking-font text-cyan-400">Latest Sagas & News</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <article class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-cyan-400">The Rise of Odin’s Eye</h3>
+        <p>Discover how our AI-powered guidance tool is changing the coding battlefield.</p>
+        <a href="#" class="text-cyan-400 hover:underline mt-2 inline-block">Read More</a>
+      </article>
+      <article class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-cyan-400">Preparing for Ragnarok</h3>
+        <p>Tips and tricks to avoid catastrophic bugs and keep your code battle-ready.</p>
+        <a href="#" class="text-cyan-400 hover:underline mt-2 inline-block">Read More</a>
+      </article>
+      <article class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-cyan-400">Valhalla Editor Secrets</h3>
+        <p>Unlock the full potential of our sacred code forge with these hidden features.</p>
+        <a href="#" class="text-cyan-400 hover:underline mt-2 inline-block">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Video Tutorials Section -->
+  <section id="videos" class="px-6 md:px-24 py-16 bg-gray-900 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-8 text-center viking-font text-purple-400">Video Tutorials & Webinars</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-purple-400">Mastering the Valhalla Editor</h3>
+        <p>Learn how to wield the sacred code forge like a true Viking warrior.</p>
+        <a href="#" class="text-purple-400 hover:underline mt-2 inline-block">Watch Now</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-purple-400">Ragnarok Detector Deep Dive</h3>
+        <p>Explore the inner workings of our bug detection tool and how to use it effectively.</p>
+        <a href="#" class="text-purple-400 hover:underline mt-2 inline-block">Watch Now</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-purple-400">Odin’s Eye AI Guidance</h3>
+        <p>Discover how AI can guide your coding journey with the wisdom of the Allfather.</p>
+        <a href="#" class="text-purple-400 hover:underline mt-2 inline-block">Watch Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Coding Challenges Section -->
+  <section id="challenges" class="px-6 md:px-24 py-16 bg-gray-800 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-8 text-center viking-font text-green-400">Interactive Coding Challenges</h2>
+    <p class="max-w-4xl mx-auto text-center mb-8">Test your skills with our Norse-inspired coding challenges and level up your warrior status.</p>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-green-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-green-400">Challenge 1: Rune Decoding</h3>
+        <p>Decode ancient runes using JavaScript and unlock hidden secrets.</p>
+        <a href="#" class="text-green-400 hover:underline mt-2 inline-block">Start Challenge</a>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-green-400/50 transition">
+        <h3 class="text-2xl font-semibold mb-2 glow-green-400">Challenge 2: Valhalla Quest</h3>
+        <p>Complete a series of coding tasks to prove your worth in Valhalla.</p>
+        <a href="#" class="text-green-400 hover:underline mt-2 inline-block">Start Challenge</a>
+      </div>
+    </div>
+  </section>
+  <!-- Newsletter Section -->
+  <section class="bg-gray-900 py-12 px-6 md:px-24 text-center text-gray-300">
+    <h2 class="text-3xl font-bold mb-4 viking-font glow glow-blue">Join the Viking Saber Newsletter</h2>
+    <p class="mb-6 max-w-xl mx-auto glow-green">Stay updated with the latest news, tools, and sagas from the clan.</p>
+    <form action="https://formspree.io/f/yourformid" method="POST" class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+      <input type="email" name="_replyto" placeholder="Enter your email" required class="flex-grow px-4 py-3 rounded bg-gray-800 border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 text-black" />
+      <button type="submit" class="button blue font-semibold px-6 py-3 rounded transition duration-300">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Newsletter Popup Modal -->
+  <div id="newsletterModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+    <div class="bg-gray-900 rounded-lg p-8 max-w-md w-full text-center text-gray-300 relative">
+      <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+      <h3 class="text-2xl font-bold mb-4 glow-blue">Join the Viking Saber Newsletter</h3>
+      <p class="mb-6">Stay updated with the latest news, tools, and sagas from the clan.</p>
+      <form id="modalNewsletterForm" action="https://formspree.io/f/yourformid" method="POST" class="flex flex-col gap-4">
+        <input type="email" name="_replyto" placeholder="Enter your email" required class="px-4 py-3 rounded bg-gray-800 border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 text-black" />
+        <button type="submit" class="button blue font-semibold px-6 py-3 rounded transition duration-300">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent" class="fixed bottom-0 left-0 w-full bg-gray-900 bg-opacity-90 text-gray-300 p-4 flex justify-between items-center space-x-4 hidden z-50">
+    <p class="text-sm max-w-3xl">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+    <button id="acceptCookiesBtn" class="button green px-4 py-2 rounded font-semibold">Accept</button>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section class="px-6 md:px-24 py-16 bg-black bg-opacity-70 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-6 text-center viking-font text-cyan-400">What Our Warriors Say</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <p class="italic mb-4">"Viking Saber has transformed my coding journey. The tools are legendary!"</p>
+        <p class="font-semibold">- Erik the Coder</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <p class="italic mb-4">"The Ragnarok Detector saved me from countless bugs. Truly a lifesaver."</p>
+        <p class="font-semibold">- Freya Dev</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <p class="italic mb-4">"Valhalla Editor is my sacred forge. Code flows like runes from my fingertips."</p>
+        <p class="font-semibold">- Odin's Apprentice</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog/News Section -->
+  <section class="px-6 md:px-24 py-16 bg-gray-900 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-8 text-center viking-font text-cyan-400">Latest Sagas & News</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2">The Rise of Odin’s Eye</h3>
+        <p>Discover how our AI-powered guidance tool is changing the coding battlefield.</p>
+        <a href="#" class="text-cyan-400 hover:underline mt-2 inline-block">Read More</a>
+      </article>
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-red-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2">Preparing for Ragnarok</h3>
+        <p>Tips and tricks to avoid catastrophic bugs and keep your code battle-ready.</p>
+        <a href="#" class="text-cyan-400 hover:underline mt-2 inline-block">Read More</a>
+      </article>
+      <article class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition">
+        <h3 class="text-2xl font-semibold mb-2">Valhalla Editor Secrets</h3>
+        <p>Unlock the full potential of our sacred code forge with these hidden features.</p>
+        <a href="#" class="text-cyan-400 hover:underline mt-2 inline-block">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="px-6 md:px-24 py-16 bg-black bg-opacity-70 text-gray-300">
+    <h2 class="text-4xl font-bold glow mb-8 text-center viking-font text-cyan-400">Frequently Asked Questions</h2>
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div class="faq-item bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <h3 class="text-xl font-semibold glow">What is Viking Saber?</h3>
+        <p class="faq-answer mt-2 hidden">Viking Saber is a Norse legend inspired coding community with powerful tools and guidance.</p>
+      </div>
+      <div class="faq-item bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <h3 class="text-xl font-semibold glow">How do I join the clan?</h3>
+        <p class="faq-answer mt-2 hidden">You can join by signing up through our newsletter or contacting us via the contact form.</p>
+      </div>
+      <div class="faq-item bg-gray-800 p-4 rounded-lg cursor-pointer">
+        <h3 class="text-xl font-semibold glow">What tools are available?</h3>
+        <p class="faq-answer mt-2 hidden">We offer AI-powered guidance, bug detection, and a sacred code editor among other tools.</p>
+      </div>
+    </div>
+  </section>
   <!-- Footer -->
   <footer class="text-center py-10 text-gray-400 bg-black border-t border-cyan-800">
-    <p class="mb-2">&copy; 2025 Viking Saber. This is the way... to code.</p>
-    <p>Crafted in the halls of Valhalla with a saber and a dream.</p>
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="mb-2 md:mb-0">&copy; 2025 Viking Saber. This is the way... to code.</p>
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <a href="https://twitter.com/vikingsaber" target="_blank" rel="noopener" aria-label="Twitter" class="hover:text-cyan-500 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.949.564-2.005.974-3.127 1.195-.897-.959-2.178-1.559-3.594-1.559-2.723 0-4.928 2.206-4.928 4.928 0 .39.045.765.127 1.124-4.094-.205-7.725-2.165-10.158-5.144-.424.729-.666 1.577-.666 2.476 0 1.708.87 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.627 1.956 2.444 3.379 4.6 3.419-1.68 1.318-3.808 2.105-6.115 2.105-.398 0-.79-.023-1.175-.068 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14-7.496 14-13.986 0-.21 0-.423-.015-.633.962-.695 1.8-1.562 2.46-2.549z"/></svg>
+        </a>
+        <a href="https://facebook.com/vikingsaber" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-cyan-500 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123v9.293h6.116c.732 0 1.324-.592 1.324-1.324v-21.35c0-.733-.592-1.325-1.324-1.325z"/></svg>
+        </a>
+        <a href="https://instagram.com/vikingsaber" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-cyan-500 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5c3.18 0 5.75 2.57 5.75 5.75v8.5c0 3.18-2.57 5.75-5.75 5.75h-8.5c-3.18 0-5.75-2.57-5.75-5.75v-8.5c0-3.18 2.57-5.75 5.75-5.75zm0 2c-2.07 0-3.75 1.68-3.75 3.75v8.5c0 2.07 1.68 3.75 3.75 3.75h8.5c2.07 0 3.75-1.68 3.75-3.75v-8.5c0-2.07-1.68-3.75-3.75-3.75h-8.5zm4.25 2.25a4.75 4.75 0 110 9.5 4.75 4.75 0 010-9.5zm0 2a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
+        </a>
+      </div>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>
